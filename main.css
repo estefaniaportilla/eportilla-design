@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    line-height: 1;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #2f4f4f;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: [first] 50% [second] 50%;
+    grid-template-rows: 100%;
+    align-items: center;
+    grid-template-areas: 
+        "cornerTopLeft cornerTopRight"
+        "cornerBottomleft cornerBottomRight";
+}
+
+@media (min-width: 200px) and (max-width: 1000px){
+    .mainContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.leftColumn {
+    grid-column-start: first;
+    grid-column-end: first;
+}
+
+img {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    display: block;
+    min-height: 100vh;
+    min-width: 100%;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    background-position: 50% 50%;
+    background-size: cover;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (min-width: 200px) and (max-width: 1000px) {
+    .image {
+        position: static;
+        width: 100%;
+    }
+}
+
+.rightColumn {
+    grid-column-start: second;
+    grid-column-end: second;
+    padding: 0 7.5rem 0;
+}
+
+@media (min-width: 200px) and (max-width: 1000px){
+    .rightColumn {
+       margin: 3.75rem;
+       padding: 0;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 1000px){
+    .rightColumn {
+       margin: 3.75rem;
+       padding: 0;
+    }
+}
+
+.name {
+    margin-bottom: 2.5rem;
+    color: #e6e6e6;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: .16rem;
+    text-transform: uppercase;
+}
+  
+.tagline {
+    margin-bottom: 2.5rem;
+    color: #e6e6e6;
+    font-size: 58px;
+    line-height: 100%;
+}
+  
+.bio {
+    margin-bottom: 40px;
+    color: #e6e6e6;
+    font-weight: 300;
+    line-height: 140%;
+  }
+
+.credit {
+    color: #848d96;
+    font-size: 13px;
+}
